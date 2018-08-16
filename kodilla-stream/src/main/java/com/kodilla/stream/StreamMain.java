@@ -1,34 +1,29 @@
 package com.kodilla.stream;
 
 
-import com.kodilla.stream.beautifier.PoemBeautifier;
-import com.kodilla.stream.iterate.NumbersGenerator;
-import com.kodilla.stream.lambda.ExpressionExecutor;
-import com.kodilla.stream.lambda.MathExpression;
-import com.kodilla.stream.reference.FunctionalCalculator;
+import com.kodilla.stream.forumuser.Forum;
+import com.kodilla.stream.forumuser.ForumUser;
+
+import java.time.LocalDate;
+import java.time.Year;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class StreamMain {
     public static void main(String[] args) {
-        ExpressionExecutor expressionExecutor = new ExpressionExecutor();
+        List<ForumUser> someDudes = Forum.getUserList();
 
-        expressionExecutor.executeExpression(10,5, (a,b)->a+b);
-        expressionExecutor.executeExpression(10,5, (a,b)->a-b);
-        expressionExecutor.executeExpression(10,5, (a,b)->a*b);
-        expressionExecutor.executeExpression(10,5, (a,b)->a/b);
 
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::multiplyAByB);
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::addAToB);
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::subBFromA);
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::divideAByB);
+        Map<Integer, ForumUser> resultMap = someDudes.stream()
+                .filter(user -> user.getSex() == 77)
+                .filter(user -> Year.now().getValue() - user.getBirthDate().getYear() > 20)
+                .filter(user -> user.getPostCount() > 0)
+                .collect(Collectors.toMap(ForumUser::getUserID, user -> user));
 
-        PoemBeautifier poemBeautifier = new PoemBeautifier();
+        resultMap.entrySet().stream()
+                .map(entry -> entry.getKey() + ": " + entry.getValue())
+                .forEach(System.out::println);
 
-        System.out.println(poemBeautifier.beautify("This is a text", text -> text+"ABCD"));
-        System.out.println(poemBeautifier.beautify("this is a text", String::toUpperCase));
-        System.out.println(poemBeautifier.beautify("this is a text", String::toLowerCase));
-        System.out.println(poemBeautifier.beautify("this is a text", text -> text+" i don't know"));
-
-        System.out.println("Using Stream to generate even numbers from 1 to 20");
-        NumbersGenerator.generateEven(20);
     }
 }

@@ -24,4 +24,12 @@ public final class Book {
         return yearOfPublication;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", yearOfPublication=" + yearOfPublication +
+                '}';
+    }
 }
