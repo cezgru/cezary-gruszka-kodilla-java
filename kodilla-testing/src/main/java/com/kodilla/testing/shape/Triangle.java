@@ -1,11 +1,26 @@
 package com.kodilla.testing.shape;
 
 public class Triangle implements Shape {
-    double sideLengthA;
-    double sidelengthB;
-    double sideLengthC;
-    double perimeter;
+    private double sideLengthA;
+    private double sidelengthB;
+    private double sideLengthC;
+    private double perimeter;
 
+    public double getSideLengthA() {
+        return sideLengthA;
+    }
+
+    public double getSidelengthB() {
+        return sidelengthB;
+    }
+
+    public double getSideLengthC() {
+        return sideLengthC;
+    }
+
+    public double getPerimeter() {
+        return perimeter;
+    }
 
     public Triangle(double sideLengthA, double sidelengthB, double sideLengthC) {
         this.sideLengthA = sideLengthA;
