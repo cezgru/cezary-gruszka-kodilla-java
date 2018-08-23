@@ -3,7 +3,7 @@ package com.kodilla.stream.world;
 import java.math.BigDecimal;
 
 public class Country {
-    final BigDecimal people;
+    private final BigDecimal people;
 
     public Country(BigDecimal people) {
         this.people = people;
