@@ -1,9 +1,5 @@
-package com.kodilla.spring;
+package com.kodilla.spring.calculator;
 
-import com.kodilla.spring.shape.Circle;
-import com.kodilla.spring.shape.Shape;
-import com.kodilla.spring.shape.Square;
-import com.kodilla.spring.shape.Triangle;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,52 +10,56 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringRunnerTestSuite {
+public class CalculatorTestSuite {
     @Test
-    public void testCircleLoadedIntoContainer() {
+    public void testAdd(){
         //Given
         ApplicationContext context =
                 new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Shape shape = (Shape)context.getBean("circle");
+        Calculator calculator = context.getBean(Calculator.class);
         //When
-        String name = shape.getShapeName();
+        double a = 5;
+        double b = 3;
         //Then
-        Assert.assertEquals("This is a circle.", name);
+        Assert.assertEquals(8, calculator.add(a, b), 0.01);
     }
 
     @Test
-    public void testTriangleLoadedIntoContainer() {
+    public void testSub(){
         //Given
         ApplicationContext context =
                 new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Shape shape = (Shape)context.getBean("triangle");
+        Calculator calculator = context.getBean(Calculator.class);
         //When
-        String name = shape.getShapeName();
+        double a = 5;
+        double b = 3;
         //Then
-        Assert.assertEquals("This is a triangle.", name);
+        Assert.assertEquals(2, calculator.sub(a, b), 0.01);
     }
 
     @Test
-    public void testSquareLoadedIntoContainer() {
+    public void testMul(){
         //Given
         ApplicationContext context =
                 new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Shape shape = (Shape)context.getBean("createSquare");
+        Calculator calculator = context.getBean(Calculator.class);
         //When
-        String name = shape.getShapeName();
+        double a = 5;
+        double b = 3;
         //Then
-        Assert.assertEquals("This is a square.", name);
+        Assert.assertEquals(15, calculator.mul(a, b), 0.01);
     }
 
     @Test
-    public void testShapeLoadedIntoContainer() {
+    public void testDiv(){
         //Given
         ApplicationContext context =
                 new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Shape shape = (Shape)context.getBean("chosenShape");
+        Calculator calculator = context.getBean(Calculator.class);
         //When
-        String name = shape.getShapeName();
+        double a = 5;
+        double b = 3;
         //Then
-        System.out.println("Chosen shape says: " + name);
+        Assert.assertEquals(1.666, calculator.div(a, b), 0.01);
     }
 }
