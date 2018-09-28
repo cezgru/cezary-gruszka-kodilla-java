@@ -1,19 +1,18 @@
 package com.kodilla.good.patterns.challenges.airplanes;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Airport {
     //Could also be protected but apparently no modifier means access is restricted to this package so yeah
-    List<Flight> arrivals = new ArrayList<>();
-    List<Flight> departures = new ArrayList<>();
+    final Set<Flight> arrivals = new HashSet<>();
+    final Set<Flight> departures = new HashSet<>();
     private String name;
 
-    public List<Flight> getArrivals() {
+    public Set<Flight> getArrivals() {
         return arrivals;
     }
 
-    public List<Flight> getDepartures() {
+    public Set<Flight> getDepartures() {
         return departures;
     }
 
@@ -21,11 +20,29 @@ public class Airport {
         return name;
     }
 
-    public Airport(String name) {
+    public Airport(String name, AirportDatabase airportDatabase) {
         this.name = name;
+        airportDatabase.airports.add(this);
     }
 
-    public Airport getAirportByName(String name){
-        return this;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Airport airport = (Airport) o;
+        return Objects.equals(name, airport.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
+    @Override
+    public String toString() {
+        return "Airport{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

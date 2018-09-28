@@ -1,13 +1,15 @@
 package com.kodilla.good.patterns.challenges.airplanes;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class AirportDatabase {
-    private static final List<Airport> airports = new ArrayList<>();
+    final Set<Airport> airports = new HashSet<>();
 
 
-    public static List<Airport> getAirports() {
+    public Set<Airport> getAirports() {
         return airports;
     }
 }

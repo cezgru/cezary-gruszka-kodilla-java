@@ -4,38 +4,38 @@ import java.time.LocalTime;
 
 public class Flight {
     private int ID;
-    private LocalTime departureTime;
-    private LocalTime arrivalTime;
-    private String origin;
-    private String destination;
+    private Airport origin;
+    private Airport destination;
 
-    public Flight(int ID, LocalTime departureTime, LocalTime arrivalTime, Airport origin, Airport destination) {
+    public Flight(int ID, Airport origin, Airport destination, FlightDatabase flightDatabase) {
         this.ID = ID;
-        this.departureTime = departureTime;
-        this.arrivalTime = arrivalTime;
-        this.origin = origin.getName();
-        this.destination = destination.getName();
+
+        this.origin = origin;
+        this.destination = destination;
         origin.departures.add(this);
         destination.arrivals.add(this);
+        flightDatabase.flightSet.add(this);
     }
 
     public int getID() {
         return ID;
     }
 
-    public LocalTime getDepartureTime() {
-        return departureTime;
-    }
 
-    public LocalTime getArrivalTime() {
-        return arrivalTime;
-    }
-
-    public String getOrigin() {
+    public Airport getOrigin() {
         return origin;
     }
 
-    public String getDestination() {
+    public Airport getDestination() {
         return destination;
+    }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "ID=" + ID +
+                ", origin=" + origin.getName() +
+                ", destination=" + destination.getName() +
+                '}';
     }
 }
