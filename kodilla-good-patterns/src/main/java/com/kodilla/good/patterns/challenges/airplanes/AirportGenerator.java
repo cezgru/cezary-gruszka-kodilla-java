@@ -2,12 +2,12 @@ package com.kodilla.good.patterns.challenges.airplanes;
 
 public class AirportGenerator {
     public static void generateAirports(AirportDatabase airportDatabase){
-        Airport Krakow = new Airport("Krakow", airportDatabase);
-        Airport Wroclaw = new Airport("Wroclaw", airportDatabase);
-        Airport Warsaw = new Airport("Warsaw", airportDatabase);
-        Airport Frankfurt = new Airport("Frankfurt", airportDatabase);
-        Airport Berlin = new Airport("Berlin", airportDatabase);
-        Airport Brussels = new Airport("Brussels", airportDatabase);
-        Airport London = new Airport("London", airportDatabase);
+        new Airport("Krakow", airportDatabase);
+        new Airport("Wroclaw", airportDatabase);
+        new Airport("Warsaw", airportDatabase);
+        new Airport("Frankfurt", airportDatabase);
+        new Airport("Berlin", airportDatabase);
+        new Airport("Brussels", airportDatabase);
+        new Airport("London", airportDatabase);
     }
 }

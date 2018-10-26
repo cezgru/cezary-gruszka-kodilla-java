@@ -1,6 +1,7 @@
 package com.kodilla.good.patterns.challenges.airplanes;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,18 +28,19 @@ public class FlightFinderStream {
                 .collect(Collectors.toList());
 
 
-        List<Flight> connectingFlightFromOrigin = flightDatabase.getFlights().stream()
+        List<ConnectingFlight> list = flightDatabase.getFlights().stream()
                 .filter(x -> x.getOrigin().equals(origin) && !(x.getDestination().equals(destination)
-                && !(x.getDestination().equals(origin))))
+                        && !(x.getDestination().equals(origin))))
+                .map(x -> ConnectingFlight.connectFlights(x, destination))
+                .flatMap(Collection::stream)
                 .collect(Collectors.toList());
+                //.collect(Collectors.toList());
+                /*
+        .flatMap(x->x.stream())
+        connectingFlightFromOrigin.stream()
+        //.map(x-> ConnectingFlight.connectFlights(x, x.getDestination()));
+        */
 
-        //connectingFlightFromOrigin.stream()
-                //.collect(Collectors.toList(x-> ConnectingFlight.connectFlights(x, x.getDestination())));
-        List<ConnectingFlight> list = new ArrayList<>();
-        for (Flight f: connectingFlightFromOrigin
-             ) {
-             list.addAll(ConnectingFlight.connectFlights(f, destination));
-        }
 
 
         List<Object> result = new ArrayList<>();
