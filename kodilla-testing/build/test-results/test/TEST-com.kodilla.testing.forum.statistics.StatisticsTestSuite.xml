@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.StatisticsTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-09-19T13:15:30" hostname="DESKTOP-B6C46RV" time="0.288">
+<testsuite name="com.kodilla.testing.forum.statistics.StatisticsTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-10-31T07:37:05" hostname="DESKTOP-B6C46RV" time="0.294">
   <properties/>
-  <testcase name="TestAverageCommentsPerPost" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.287"/>
+  <testcase name="TestAverageCommentsPerPost" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.293"/>
   <testcase name="TestAverageCommentsPerUser" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.0"/>
   <testcase name="TestPostCount" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.0"/>
   <testcase name="TestAveragePostsPerUser" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>

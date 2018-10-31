@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.rozmowa1309.MainTestSuite" tests="9" skipped="0" failures="0" errors="0" timestamp="2018-09-19T13:15:27" hostname="DESKTOP-B6C46RV" time="0.006">
+<testsuite name="com.kodilla.stream.rozmowa1309.MainTestSuite" tests="9" skipped="0" failures="0" errors="0" timestamp="2018-10-31T07:37:03" hostname="DESKTOP-B6C46RV" time="0.007">
   <properties/>
-  <testcase name="testAverageJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.001"/>
+  <testcase name="testAverageJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.002"/>
   <testcase name="testSumJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.0"/>
   <testcase name="testCountLength3UsingJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.0"/>
-  <testcase name="testMinJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.001"/>
-  <testcase name="testCountEmptyStringUsingJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.0"/>
+  <testcase name="testMinJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.0"/>
+  <testcase name="testCountEmptyStringUsingJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.001"/>
   <testcase name="testSquaresJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.001"/>
   <testcase name="testMaxJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.001"/>
   <testcase name="testDeleteEmptyStringsUsingJava8" classname="com.kodilla.stream.rozmowa1309.MainTestSuite" time="0.0"/>

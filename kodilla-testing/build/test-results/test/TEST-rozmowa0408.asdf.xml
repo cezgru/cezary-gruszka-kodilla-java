@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rozmowa0408.asdf" tests="9" skipped="0" failures="0" errors="0" timestamp="2018-09-19T13:15:30" hostname="DESKTOP-B6C46RV" time="0.002">
+<testsuite name="rozmowa0408.asdf" tests="9" skipped="0" failures="0" errors="0" timestamp="2018-10-31T07:37:05" hostname="DESKTOP-B6C46RV" time="0.001">
   <properties/>
-  <testcase name="testMax" classname="rozmowa0408.asdf" time="0.001"/>
+  <testcase name="testMax" classname="rozmowa0408.asdf" time="0.0"/>
   <testcase name="testMin" classname="rozmowa0408.asdf" time="0.0"/>
   <testcase name="testSum" classname="rozmowa0408.asdf" time="0.0"/>
   <testcase name="testAverage" classname="rozmowa0408.asdf" time="0.0"/>
