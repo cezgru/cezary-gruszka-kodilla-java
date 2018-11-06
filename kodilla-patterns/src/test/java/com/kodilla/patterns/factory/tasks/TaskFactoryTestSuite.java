@@ -14,7 +14,7 @@ public class TaskFactoryTestSuite {
         String name = shopping.getTaskName();
 
         //Then
-        assert (shopping.isTaskExecuted());
+        Assert.assertTrue(shopping.isTaskExecuted());
         Assert.assertEquals("dunno", name);
 
     }
@@ -28,7 +28,7 @@ public class TaskFactoryTestSuite {
         painting.executeTask();
         String name = painting.getTaskName();
         //Then
-        assert (painting.isTaskExecuted());
+        Assert.assertTrue(painting.isTaskExecuted());
         Assert.assertEquals("really though", name);
 
     }
