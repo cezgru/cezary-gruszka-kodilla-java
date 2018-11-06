@@ -7,8 +7,8 @@ import java.util.List;
 public class Bigmac {
     private String bun;
     private int burgers;
-    String sauce;
-    List<String> ingredients;
+    private String sauce;
+    private List<String> ingredients;
 
     public static class BigmacBuilder{
         private String bun;

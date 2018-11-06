@@ -43,7 +43,7 @@ public class TaskFactoryTestSuite {
         String name = driving.getTaskName();
 
         //Then
-        assert (driving.isTaskExecuted());
+        Assert.assertTrue(driving.isTaskExecuted());
         Assert.assertEquals("initial d", name);
     }
 }
