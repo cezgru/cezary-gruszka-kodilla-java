@@ -9,6 +9,10 @@ public class StringObfuscationTestSuite {
     StringObfuscation creditCard = new StringObfuscation();
 
     @Test
+    public void shouldCheckFourthDigitFromEndIndex(){
+        assertEquals(3, EndDigitCounter.fourthDigitIndexFromTheEnd("0123asd789qwerty"));
+    }
+    @Test
     public void shouldMaskDigitsForBasicCreditCards() {
         assertEquals("5###########0694", creditCard.maskify("5512103073210694"));
     }
