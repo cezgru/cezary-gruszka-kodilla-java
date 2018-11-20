@@ -91,4 +91,20 @@ public class BookDirectoryTestSuite {
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
 
+    @Test
+    public void testListBooksInHandsOf(){
+        //Given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        List<Book> resultListOf10Books = generateListOfNBooks(10);
+        LibraryUser libraryUser = new LibraryUser("John", "Smith", "1234567890");
+        when(bookLibrary.listBooksInHandsOF(libraryUser))
+                .thenReturn(resultListOf10Books);
+
+        //When
+        List<Book> theListOfBooks10 = bookLibrary.listBooksWithCondition("An");
+        libraryDatabaseMock.rentABook(libraryUser, resultListOf10Books.get(2));
+
+    }
+
 }

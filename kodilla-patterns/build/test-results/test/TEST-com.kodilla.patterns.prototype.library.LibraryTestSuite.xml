@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-20T02:43:47" hostname="DESKTOP-B6C46RV" time="0.006">
+  <properties/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.006"/>
+  <system-out><![CDATA[Library{name='My Library', books=[Book{title='T1', author='A1', publicationDate=1993-12-01}, Book{title='T2', author='A2', publicationDate=1995-10-12}, Book{title='T3', author='A3', publicationDate=1997-08-23}]}
+Library{name='My Library Shallow Copy', books=[Book{title='T1', author='A1', publicationDate=1993-12-01}, Book{title='T2', author='A2', publicationDate=1995-10-12}, Book{title='T3', author='A3', publicationDate=1997-08-23}]}
+Library{name='My Library Deep Copy', books=[Book{title='T1', author='A1', publicationDate=1993-12-01}, Book{title='T2', author='A2', publicationDate=1995-10-12}, Book{title='T3', author='A3', publicationDate=1997-08-23}]}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.StatisticsTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-10-31T07:37:05" hostname="DESKTOP-B6C46RV" time="0.294">
+<testsuite name="com.kodilla.testing.forum.statistics.StatisticsTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-11-20T02:43:49" hostname="DESKTOP-B6C46RV" time="0.237">
   <properties/>
-  <testcase name="TestAverageCommentsPerPost" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.293"/>
-  <testcase name="TestAverageCommentsPerUser" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.0"/>
+  <testcase name="TestAverageCommentsPerPost" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.235"/>
+  <testcase name="TestAverageCommentsPerUser" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>
   <testcase name="TestPostCount" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.0"/>
-  <testcase name="TestAveragePostsPerUser" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.001"/>
+  <testcase name="TestAveragePostsPerUser" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.0"/>
   <testcase name="TestCommentCount" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.0"/>
   <testcase name="TestUserCount" classname="com.kodilla.testing.forum.statistics.StatisticsTestSuite" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
