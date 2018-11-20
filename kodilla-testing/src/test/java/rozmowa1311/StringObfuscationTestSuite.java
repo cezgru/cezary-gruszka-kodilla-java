@@ -10,6 +10,7 @@ public class StringObfuscationTestSuite {
 
     @Test
     public void shouldCheckFourthDigitFromEndIndex(){
+        System.out.println((int) '9');
         assertEquals(3, EndDigitCounter.fourthDigitIndexFromTheEnd("0123asd789qwerty"));
     }
     @Test
