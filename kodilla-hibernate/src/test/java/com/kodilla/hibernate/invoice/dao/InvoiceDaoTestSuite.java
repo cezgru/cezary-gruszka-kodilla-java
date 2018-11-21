@@ -49,17 +49,16 @@ public class InvoiceDaoTestSuite {
 
         productDao.save(product);
         productDao.save(product1);
-        //itemDao.save(item1);
-        //itemDao.save(item2);
-        //itemDao.save(item3);
-        //itemDao.save(item4);
         invoiceDao.save(invoice);
 
         int id = invoice.getId();
 
         //Then
-        Assert.assertEquals(0, id);
+        Assert.assertEquals(1, id);
 
         //CleanUp
+        productDao.delete(product.getId());
+        productDao.delete(product1.getId());
+        invoiceDao.delete(id);
     }
 }
