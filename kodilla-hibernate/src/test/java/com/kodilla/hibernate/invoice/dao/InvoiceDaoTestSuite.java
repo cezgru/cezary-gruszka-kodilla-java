@@ -21,6 +21,8 @@ public class InvoiceDaoTestSuite {
     private InvoiceDao invoiceDao;
     @Autowired
     private ProductDao productDao;
+    @Autowired
+    private ItemDao itemDao;
     @Test
     public void testInvoiceDao() {
         //Given
@@ -36,11 +38,17 @@ public class InvoiceDaoTestSuite {
         itemList.add(item1);
         itemList.add(item2);
         itemList.add(item3);
+        invoice.setItems(itemList);
 
 
         //When
+        productDao.save(product);
+        productDao.save(product1);
+        itemDao.save(item);
+        itemDao.save(item1);
+        itemDao.save(item2);
+        itemDao.save(item3);
         invoiceDao.save(invoice);
-
 
         int id = invoice.getId();
 
