@@ -14,8 +14,14 @@ public class Invoice {
     public Invoice() {
     }
 
-    public Invoice(int id, String number, List<Item> items) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "id=" + id +
+                '}';
+    }
+
+    public Invoice(String number, List<Item> items) {
         this.number = number;
         this.items = items;
     }

@@ -16,8 +16,15 @@ public class Item {
     public Item() {
     }
 
-    public Item(int id, Product product, BigDecimal price, int quantity, Invoice invoice) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", invoice=" + invoice +
+                '}';
+    }
+
+    public Item(Product product, BigDecimal price, int quantity, Invoice invoice) {
         this.product = product;
         this.price = price;
         this.quantity = quantity;
